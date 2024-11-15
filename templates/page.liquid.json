@@ -15,9 +15,63 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_HbJqxK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fBEgQm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Title",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fBEgQm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_9fCLkX": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ page.title }}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_VWwYnN": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{page.title}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_TwHMzP": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign my_array = \"A,B,C\" | split: \",\"%}\n{% for user in my_array %}\n{{user}}\n{% endfor%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_HbJqxK",
+    "custom_liquid_9fCLkX",
+    "custom_liquid_VWwYnN",
+    "custom_liquid_TwHMzP"
   ]
 }
