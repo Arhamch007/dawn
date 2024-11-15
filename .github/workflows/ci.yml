@@ -1,5 +1,9 @@
 name: CI
 on: [push]
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   lhci:
     name: Lighthouse
@@ -15,11 +19,14 @@ jobs:
           collection_handle: all
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_TOKEN }}
           pull_theme: ${{ secrets.SHOP_PULL_THEME }}
+
   theme-check:
     name: Theme Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Validate Theme Locally
+        run: theme-check .
       - name: Theme Check
         uses: shopify/theme-check-action@v1
         with:
