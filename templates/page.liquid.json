@@ -60,7 +60,7 @@
     "custom_liquid_TwHMzP": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% assign my_array = \"A,B,C\" | split: \",\"%}\n{% for user in my_array %}\n{{user}}\n{% endfor%}",
+        "custom_liquid": "{% assign name = \"A,b,c\" | split: \",\" %}\n{% for user in name %}\n{{user}}\n{% endfor %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
