@@ -1,6 +1,8 @@
 <h1>Heading</h1>
 {{ section.settings['liquid-ref'] }}
 
+<br>
+
 <h1>Checkbox</h1>
 
 {% if section.settings.checkbox == true %}
@@ -9,11 +11,15 @@
   checkbox not checked
 {% endif %}
 
+<br>
+
 <h1>Number</h1>
 
 {% if section.settings.number != 0 %}
   {{ section.settings.number }}
 {% endif %}
+
+<br>
 
 <h1>Radio</h1>
 
@@ -22,6 +28,12 @@
 {% else %}
   Option 2 is selected
 {% endif %}
+
+<br>
+
+<h1>Range</h1>
+{{ section.settings.range }}
+
 {% schema %}
   {
     "name": "Liquid Reference",
@@ -55,6 +67,16 @@
             "label": "Option 2"
           }
         ]
+      },
+      {
+        "id": "range",
+        "type": "range",
+        "label": "Range",
+        "min": 3,
+        "max": 12,
+        "step": 3,
+        "unit": "# of posts",
+        "default": 3
       }
     ],
     "presets": [
