@@ -16,52 +16,52 @@
 {% endif %}
 
 <h1>Radio</h1>
-{{ % if section.settings.radio == "option-1" % }}
-{{ Option 1 is selected }}
-{{ % else % }}
-{{ Option 2 is selected }}
-{{ %endif% }}
+{% if section.settings.radio == "option-1" %}
+  {{ Option 1 is selected }}
+{% else %}
+  {{ Option 2 is selected }}
+{% endif %}
 
 {% schema %}
-{
-  "name": "Liquid Reference",
-  "settings": [
-    {
-      "id": "liquid-ref",
-      "type": "text",
-      "label": "A Reference for Shopify Liquid"
-    },
-    {
-      "id": "checkbox",
-      "type": "checkbox",
-      "label": "A checkbox"
-    },
-    {
-      "id": "number",
-      "type": "number",
-      "label": "enter you number"
-    },
-    {
-      "id": "radio",
-      "type": "radio",
-      "label": "Radio Number",
-      "options": [
-        {
-          "value": "option-1",
-          "label": "Option 1"
-        },
-        {
-          "value": "option-2",
-          "label": "Option 2"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Liquid Reference",
-      "category": "index"
-    }
-  ]
-}
+  {
+    "name": "Liquid Reference",
+    "settings": [
+      {
+        "id": "liquid-ref",
+        "type": "text",
+        "label": "A Reference for Shopify Liquid"
+      },
+      {
+        "id": "checkbox",
+        "type": "checkbox",
+        "label": "A checkbox"
+      },
+      {
+        "id": "number",
+        "type": "number",
+        "label": "enter you number"
+      },
+      {
+        "id": "radio",
+        "type": "radio",
+        "label": "Radio Number",
+        "options": [
+          {
+            "value": "option-1",
+            "label": "Option 1"
+          },
+          {
+            "value": "option-2",
+            "label": "Option 2"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Liquid Reference",
+        "category": "index"
+      }
+    ]
+  }
 {% endschema %}
