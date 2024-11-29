@@ -34,6 +34,11 @@
 <h1>Range</h1>
 {{ section.settings.range }}
 
+<br>
+
+<h1>Select</h1>
+{{ section.settings.select }}
+
 {% schema %}
   {
     "name": "Liquid Reference",
@@ -76,6 +81,26 @@
         "max": 12,
         "step": 3,
         "default": 3
+      },
+      {
+        "id": "select",
+        "type": "select",
+        "label": "Select",
+        "options": [
+          {
+            "value": "Option 1",
+            "label": "Option 1"
+          },
+          {
+            "value": "Option 2",
+            "label": "Option 2"
+          },
+          {
+            "value": "Option 3",
+            "label": "Option 3"
+          }
+        ],
+        "default": "Option 2"
       }
     ],
     "presets": [
