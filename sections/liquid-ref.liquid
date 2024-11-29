@@ -1,4 +1,7 @@
-<h1>{{ section.settings['liquid-ref'] }}</h1>
+<h1>Heaading</h1>
+<h2>{{ section.settings['liquid-ref'] }}</h2>
+
+<h1>Checkbox</h1>
 
 {% if section.settings.checkbox == true %}
   <h2>checkbox checked</h2>
@@ -6,17 +9,15 @@
   <h2>checkbox not checked</h2>
 {% endif %}
 
+<h1>Number</h1>
+
 {% if section.settings.number != 0 %}
   {{ section.settings.number }}
 {% endif %}
 
-{% assign selected_value = section.settings.radio %}
+<h1>Radio</h1>
 
-{% for option in section.settings.radio.options %}
-  {% if option.value == selected_value %}
-    {{ option.label }}
-  {% endif %}
-{% endfor %}
+{{ section.settings.radio }}
 
 {% schema %}
 {
