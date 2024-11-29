@@ -14,7 +14,7 @@
 
 {%- for option in section.settings.radio.options -%}
   {%- if option.value == selected_value -%}
-    {{ option.label }}
+    {{ option.value }}
   {%- endif -%}
 {%- endfor -%}
 {% schema %}
