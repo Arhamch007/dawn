@@ -10,8 +10,13 @@
   {{ section.settings.number }}
 {% endif %}
 
-{{ section.settings.radio.options.label }}
+{%- assign selected_value = section.settings.radio -%}
 
+{%- for option in section.settings.radio.options -%}
+  {%- if option.value == selected_value -%}
+    {{ option.label }}
+  {%- endif -%}
+{%- endfor -%}
 {% schema %}
 {
   "name": "Liquid Reference",
